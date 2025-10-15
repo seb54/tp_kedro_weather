@@ -35,16 +35,15 @@ You can run your Kedro project with:
 kedro run
 ```
 
-## How to test your Kedro project
+## How to visualize your Kedro pipeline
 
-Have a look at the file `tests/test_run.py` for instructions on how to write your tests. You can run your tests as follows:
+You can visualize your pipeline with Kedro Viz:
 
 ```
-pytest
+kedro viz
 ```
 
-You can configure the coverage threshold in your project's `pyproject.toml` file under the `[tool.coverage.report]` section.
-
+This will open an interactive web interface at `http://localhost:4141` where you can explore the pipeline structure, nodes, and datasets.
 
 ## Project dependencies
 

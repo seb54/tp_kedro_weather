@@ -26,10 +26,9 @@
 📚 DOCUMENTATION DISPONIBLE
 ═══════════════════════════════════════════════════════════════════════
 
-📄 README_EXERCICE.md      - Documentation complète du projet
+📄 README.md               - Documentation du projet Kedro
 📄 GUIDE_UTILISATION.md    - Guide pratique avec exemples
-📄 RESUME_EXERCICE.md      - Résumé de l'exercice complet
-📄 FICHIERS_CLES.md        - Liste des fichiers importants
+📄 DEMARRAGE_RAPIDE.txt    - Ce fichier - Guide de démarrage rapide
 
 ═══════════════════════════════════════════════════════════════════════
 ✨ CE QUI A ETE REALISE
@@ -51,15 +50,16 @@
 ═══════════════════════════════════════════════════════════════════════
 
 Nettoyage :
-  - 7 valeurs manquantes dans humidity → corrigées
-  - 6 valeurs manquantes dans windspeed → corrigées
-  - 3 valeurs incohérentes → converties et corrigées
+  - 15 valeurs manquantes dans temperature → corrigées
+  - 14 valeurs manquantes dans humidity → corrigées
+  - 13 valeurs manquantes dans windspeed → corrigées
+  - Total : 42 valeurs problématiques traitées
 
 Performance du modèle :
-  - MSE (train) : 46.03
-  - MSE (test)  : 83.55
-  - R² (train)  : 0.1253
-  - R² (test)   : -0.4983
+  - MSE (train) : 178.49
+  - MSE (test)  : 152.37
+  - R² (train)  : 0.0066
+  - R² (test)   : -0.0311
 
 Fichiers générés :
   ✓ data/02_intermediate/cleaned_weather_data.csv
@@ -127,5 +127,5 @@ kedro run --help           - Aide sur les options
 
 Bravo ! Vous avez terminé l'exercice Kedro avec succès ! 🎉
 
-Consultez README_EXERCICE.md pour plus de détails.
+Consultez README.md et GUIDE_UTILISATION.md pour plus de détails.
 
