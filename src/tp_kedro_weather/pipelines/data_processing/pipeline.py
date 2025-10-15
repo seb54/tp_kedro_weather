@@ -8,6 +8,7 @@ from .nodes import (
     save_model,
     save_metrics,
 )
+from .reporting import generate_model_report
 
 
 def create_pipeline(**kwargs) -> Pipeline:
@@ -53,6 +54,13 @@ def create_pipeline(**kwargs) -> Pipeline:
                 inputs="training_results",
                 outputs="metrics",
                 name="save_metrics_node",
+            ),
+            # Node 6: Générer le rapport visuel
+            node(
+                func=generate_model_report,
+                inputs="metrics",
+                outputs=None,
+                name="generate_report_node",
             ),
         ]
     )
