@@ -39,7 +39,8 @@ def clean_weather_data(df: pd.DataFrame) -> pd.DataFrame:
     # Copier le DataFrame pour éviter de modifier l'original
     df_clean = df.copy()
     
-    # Convertir les colonnes humidity et windspeed en numériques
+    # Convertir toutes les colonnes en numériques (gère les valeurs texte comme 'N/A', 'missing', 'unknown')
+    df_clean['temperature'] = pd.to_numeric(df_clean['temperature'], errors='coerce')
     df_clean['humidity'] = pd.to_numeric(df_clean['humidity'], errors='coerce')
     df_clean['windspeed'] = pd.to_numeric(df_clean['windspeed'], errors='coerce')
     
