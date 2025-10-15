@@ -1,0 +1,14 @@
+# Kedro
+kedro~=1.0.0
+kedro-datasets~=8.0
+kedro-viz~=12.0
+
+# Data Science
+pandas>=2.0
+numpy>=1.24
+scikit-learn>=1.3
+
+# Jupyter (optionnel pour exploration)
+ipython>=8.10
+jupyterlab>=3.0
+notebook

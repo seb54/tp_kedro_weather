@@ -1,0 +1,32 @@
+# Here you can define all your datasets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://docs.kedro.org/en/stable/data/data_catalog.html
+
+# Données météo brutes
+raw_weather_data:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/weather_data.csv
+
+# Données chargées (en mémoire uniquement)
+loaded_data:
+  type: MemoryDataset
+
+# Données nettoyées
+cleaned_weather_data:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/cleaned_weather_data.csv
+
+# Résultats d'entraînement (en mémoire uniquement)
+training_results:
+  type: MemoryDataset
+
+# Modèle entraîné
+trained_model:
+  type: pickle.PickleDataset
+  filepath: data/04_models/modele.pkl
+
+# Métriques de performance
+metrics:
+  type: pickle.PickleDataset
+  filepath: data/04_models/metrics.pkl
